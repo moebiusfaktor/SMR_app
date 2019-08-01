@@ -32,7 +32,7 @@ export class Search extends Component {
   render() {
     console.log(this.state.movies);
     return (
-      <div>
+      <div style={{ marginTop: "100px" }}>
         <form>
           <input
             onChange={this.handleChange}

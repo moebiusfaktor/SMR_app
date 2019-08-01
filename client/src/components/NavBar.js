@@ -21,7 +21,7 @@ class NavBar extends React.Component {
           ) : (
             <Link to="/login">Login</Link>
           )}
-          <Link to="#">Bestlist</Link>
+          <Link to="/bestlist">Bestlist</Link>
 
           <Link to="#">Compare</Link>
         </div>
