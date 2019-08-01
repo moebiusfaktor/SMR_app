@@ -32,13 +32,12 @@ export class Search extends Component {
   };
 
   addDefaultSrc(ev) {
-    ev.target.src =
-      "https://m.media-amazon.com/images/M/MV5BMjc0YWM3MjQtNzNhYy00ZWM5LTk2ODMtNTE0ZmVmYzgzMWMwXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg";
+    ev.target.src = "/images/SMR_poster_alt.png";
   }
 
   render() {
     return (
-      <div>
+      <div className="search">
         <form>
           <input
             className={

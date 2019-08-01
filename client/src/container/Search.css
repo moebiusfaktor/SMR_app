@@ -3,13 +3,13 @@ body {
   margin-top: 60px;
 }
 
-.movies-list {
+.search .movies-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-.movie-card {
+.search .movie-card {
   font-display: flex;
   font-family: "Abril Fatface", cursive;
   color: white;
@@ -23,7 +23,7 @@ body {
   position: relative;
 }
 
-.movie-card img {
+.search .movie-card img {
   height: 100%;
   width: 100%;
   position: relative;
@@ -31,7 +31,7 @@ body {
   border-style: none;
 }
 
-.movie-card p {
+.search .movie-card p {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   position: absolute;
