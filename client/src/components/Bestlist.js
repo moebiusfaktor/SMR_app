@@ -54,17 +54,16 @@ export default class Bestlist extends Component {
           {[...this.state.movies]
             .sort((a, b) => b[this.state.sort] - a[this.state.sort])
             .map(movie => (
-              <Link to={`/rating/${movie._id}`}>
-                <div className="movie-card">
-                  <h3 className="title">{movie.title}</h3>
+              <div className="movie-card">
+                <h3 className="title">{movie.title}</h3>
+                <Link to={`/rating/${movie._id}`}>
                   <img
                     src={`https://image.tmdb.org/t/p/w500${movie.poster}`}
                     alt=""
                   />
-
-                  <h1 className="rate">{movie[this.state.sort]}</h1>
-                </div>
-              </Link>
+                </Link>
+                <h1 className="rate">{movie[this.state.sort]}</h1>
+              </div>
             ))}
         </div>
       </div>

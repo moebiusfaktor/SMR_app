@@ -2,6 +2,7 @@
   /* background-color: #246eb9; */
   /* position: fixed; */
   height: 100vh;
+  overflow: hidden;
 }
 
 .signup-form {

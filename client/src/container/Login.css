@@ -2,6 +2,7 @@
   /* background-color: #4cb944; */
   /* position: fixed; */
   height: 100vh;
+  overflow: hidden;
 }
 
 .login-form {

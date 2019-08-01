@@ -56,7 +56,7 @@ export default class Login extends Component {
                 id="password"
                 value={this.state.password}
                 onChange={this.handleChange}
-                placeholder="email"
+                placeholder="eMail"
               />
             </Form.Group>
 
