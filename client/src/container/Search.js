@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
+import "./Search.css";
 
 export class Search extends Component {
   state = {
@@ -28,6 +30,7 @@ export class Search extends Component {
   };
 
   render() {
+    console.log(this.state.movies);
     return (
       <div>
         <form>
@@ -40,22 +43,16 @@ export class Search extends Component {
           />
         </form>
 
-        {/* {this.state.movies && this.state.movies[0] && (
-          <img
-            src={`https://image.tmdb.org/t/p/w500${
-              this.state.movies[0].poster_path
-            }`}
-          />
-        )} */}
-
         {this.state.movies &&
           this.state.movies[0] &&
           this.state.movies.map(element => (
             <div>
-              <img
-                src={`https://image.tmdb.org/t/p/w500${element.poster_path}`}
-              />
-              <h2>`${element.title}`</h2>
+              <Link to={`/Rating/${element.id}`}>
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${element.poster_path}`}
+                />
+                <h2>{element.title}</h2>
+              </Link>
             </div>
           ))}
       </div>

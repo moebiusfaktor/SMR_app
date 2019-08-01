@@ -43,7 +43,9 @@ class Rating extends Component {
       .then(response => {
         this.setState({ isRatedByUser: true });
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        this.props.history.push("/login");
+      });
   };
 
   componentDidMount() {
