@@ -21,9 +21,9 @@ class NavBar extends React.Component {
           ) : (
             <Link to="/login">Login</Link>
           )}
-          <Link to="#">Bestlist</Link>
+          <Link to="/bestlist">Bestlist</Link>
 
-          <Link to="#">Compare</Link>
+          <Link to="/profile">Profile</Link>
         </div>
         <Link to={`/`} activeClassName="active">
           <img src="/images/SMR_logo4.png" alt="SERIOUS RATED MOVIES" />

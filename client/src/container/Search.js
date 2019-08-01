@@ -1,9 +1,12 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
+import "./Search.css";
 
 export class Search extends Component {
   state = {
-    searchInput: ""
+    searchInput: "",
+    movies: []
   };
 
   handleChange = event => {
@@ -15,12 +18,13 @@ export class Search extends Component {
         `https://api.themoviedb.org/3/search/movie?api_key=8f65e058909f840142cc388d8da5b828&query=${value}`
       )
       .then(movies => {
-        console.log("get movies", movies.data.results);
         this.setState({
           movies: movies.data.results
         });
       })
-      .catch(err => console.log("Error while getting movies", err));
+      .catch(err => {
+        this.setState({ movies: [] });
+      });
 
     this.setState({
       [name]: value
@@ -32,6 +36,11 @@ export class Search extends Component {
       <div>
         <form>
           <input
+            className={
+              this.state.movies.length && this.state.searchInput
+                ? "Searchbar-top"
+                : "Searchbar-center"
+            }
             onChange={this.handleChange}
             type="text"
             name="searchInput"
@@ -40,24 +49,21 @@ export class Search extends Component {
           />
         </form>
 
-        {/* {this.state.movies && this.state.movies[0] && (
-          <img
-            src={`https://image.tmdb.org/t/p/w500${
-              this.state.movies[0].poster_path
-            }`}
-          />
-        )} */}
-
-        {this.state.movies &&
-          this.state.movies[0] &&
+        {this.state.movies && this.state.movies[0] ? (
           this.state.movies.map(element => (
-            <div>
-              <img
-                src={`https://image.tmdb.org/t/p/w500${element.poster_path}`}
-              />
-              <h2>`${element.title}`</h2>
+            <div className="movie-card">
+              <Link to={`/Rating/${element.id}`}>
+                <img
+                  className="gallery"
+                  src={`https://image.tmdb.org/t/p/w500${element.poster_path}`}
+                />
+                <h2>{element.title}</h2>
+              </Link>
             </div>
-          ))}
+          ))
+        ) : (
+          <img className="big-logo" src="/images/SMR_logo_tag.png" />
+        )}
       </div>
     );
   }

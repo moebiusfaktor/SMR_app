@@ -1,0 +1,33 @@
+.bestlist-container {
+  margin-top: 100px;
+  display: flex;
+  position: relative;
+}
+
+.sort-button-container {
+  width: 30vw;
+  position: fixed;
+  top: 20vh;
+  left: 0;
+}
+
+.sort-button-container button {
+  display: block;
+  width: 8.2rem;
+  height: 8.2rem;
+  padding-right: 10px;
+  color: white;
+  background-color: black;
+  border: none;
+  border-bottom: 1px solid white;
+  font-family: "Radley", serif;
+  font-size: 1.7rem;
+}
+
+.movie-container {
+  margin: auto;
+}
+
+.movie-container img {
+  width: 40rem;
+}

@@ -9,6 +9,7 @@ import Profile from "./container/Profile";
 import RatingSlider from "./components/RatingSlider";
 import Scales from "./components/Scales";
 import Radar from "./components/Radar";
+import BestList from "./components/Bestlist";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends React.Component {
@@ -22,6 +23,7 @@ class App extends React.Component {
     });
   };
   render() {
+    console.log(this.state.user);
     return (
       <div className="App">
         <Router>
@@ -58,7 +60,20 @@ class App extends React.Component {
                 />
               )}
             />
-            <Route path="/Profile" component={Profile} />
+            <Route
+              path="/bestlist"
+              render={props => (
+                <BestList
+                  {...props}
+                  user={this.state.user}
+                  setUser={this.setUser}
+                />
+              )}
+            />
+            <Route
+              path="/Profile"
+              render={props => <Profile user={this.state.user} {...props} />}
+            />
           </Switch>
         </Router>
       </div>
