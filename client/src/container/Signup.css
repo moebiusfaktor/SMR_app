@@ -1,0 +1,30 @@
+.signup-page {
+  /* background-color: #246eb9; */
+  /* position: fixed; */
+  height: 100vh;
+}
+
+.signup-form {
+  margin-top: 1vh;
+  box-sizing: content-box;
+  background-color: #000;
+  text-align: center;
+  width: 33vw;
+  padding-bottom: 5px;
+  padding-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.4);
+}
+
+.signup-input {
+  font-family: "Radley", serif;
+  color: white;
+}
+
+.big-logo {
+  margin-top: 20vh;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50vh;
+}

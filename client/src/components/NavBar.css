@@ -1,0 +1,49 @@
+.Navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 10vh;
+  background: #000;
+  display: flex;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.Navbar img {
+  position: absolute;
+  left: 50vw;
+  top: 35px;
+  transform: translate(-50%, -50%);
+  height: 150%;
+}
+
+.nav {
+  list-style: none;
+  background: #000;
+  font-family: "Radley", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav a {
+  /* display: flex;
+  padding: 8px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  border-right: 1px solid #ccc; */
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  border-right: 2px solid #ccc;
+  /* box-shadow: 1px 0 10px grey; */
+  height: 100%;
+  padding: 0 10px;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
