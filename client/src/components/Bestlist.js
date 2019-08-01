@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import "./Bestlist.css";
 
 export default class Bestlist extends Component {
   state = {
@@ -32,33 +34,38 @@ export default class Bestlist extends Component {
 
   render() {
     return (
-      <div style={{ marginTop: "100px" }}>
-        <div>
+      <div className="bestlist-container">
+        <div className="sort-button-container">
           <button onClick={() => this.handleSort("directingAvg")}>
             Directing
           </button>
           <button onClick={() => this.handleSort("writingAvg")}>Writing</button>
           <button onClick={() => this.handleSort("editingAvg")}>Editing</button>
           <button onClick={() => this.handleSort("cameraWorkAvg")}>
-            Camera Work
+            Camera
           </button>
           <button onClick={() => this.handleSort("lightingAvg")}>
             Lighting
           </button>
           <button onClick={() => this.handleSort("actingAvg")}>Acting</button>
         </div>
-        {[...this.state.movies]
-          .sort((a, b) => b[this.state.sort] - a[this.state.sort])
-          .map(movie => (
-            <div>
-              <img
-                src={`https://image.tmdb.org/t/p/w500${movie.poster}`}
-                alt=""
-              />
-              <p>{movie.title}</p>
-              <p>{movie[this.state.sort]}</p>
-            </div>
-          ))}
+        <div className="movie-container">
+          {[...this.state.movies]
+            .sort((a, b) => b[this.state.sort] - a[this.state.sort])
+            .map(movie => (
+              <div>
+                <p>{movie.title}</p>
+                <Link to={`/rating/${movie._id}`}>
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500${movie.poster}`}
+                    alt=""
+                  />
+                </Link>
+
+                <p>{movie[this.state.sort]}</p>
+              </div>
+            ))}
+        </div>
       </div>
     );
   }
