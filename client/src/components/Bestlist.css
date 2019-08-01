@@ -28,6 +28,43 @@
   margin: auto;
 }
 
-.movie-container img {
-  width: 40rem;
+.movie-container .movie-card {
+  position: relative;
+  vertical-align: middle;
+  border-style: none;
+}
+
+.movie-container .movie-card img {
+  margin-top: 7rem;
+  width: 35rem;
+}
+
+.movie-container .movie-card .title {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 1;
+  font-weight: 900;
+  font-size: 2rem;
+  background-color: black;
+  /* width: 35rem; */
+}
+
+.movie-container .movie-card .rate {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 1;
+  font-weight: 900;
+  font-size: 2rem;
+  background-color: black;
+  /* width: 35rem; */
 }

@@ -10,10 +10,10 @@
   z-index: 2;
 }
 
-.Navbar img {
+.main-nav-logo {
   position: absolute;
   left: 50vw;
-  top: 35px;
+  top: 3.5rem;
   transform: translate(-50%, -50%);
   height: 150%;
 }
@@ -27,6 +27,11 @@
   align-items: center;
 }
 
+.nav-icon {
+  filter: invert(100%);
+  width: 2.5rem;
+}
+
 .nav a {
   /* display: flex;
   padding: 8px 15px;
@@ -38,7 +43,7 @@
   text-align: center;
   text-decoration: none;
   font-size: 17px;
-  border-right: 2px solid #ccc;
+  /* border-right: 2px solid #ccc; */
   /* box-shadow: 1px 0 10px grey; */
   height: 100%;
   padding: 0 10px;

@@ -16,17 +16,32 @@ class NavBar extends React.Component {
         <div className="nav">
           {this.props.user ? (
             <Link onClick={() => this.handleLogout()} to="/">
-              Logout
+              <img className="nav-icon" src="/icons/logout-2.png" />
             </Link>
           ) : (
-            <Link to="/login">Login</Link>
+            <Link to="/login">
+              {" "}
+              <img className="nav-icon" src="/icons/login-1.png" />
+            </Link>
           )}
-          <Link to="/bestlist">Bestlist</Link>
+          <Link to="/bestlist">
+            {" "}
+            <img className="nav-icon" src="/icons/list.png" />
+          </Link>
 
-          <Link to="/profile">Profile</Link>
+          <Link to="/">
+            <img className="nav-icon" src="/icons/search-1.png" />
+          </Link>
+
+          {/* <Link to="/profile">Profile</Link> */}
         </div>
         <Link to={`/`} activeClassName="active">
           <img src="/images/SMR_navLogo.png" alt="SERIOUS RATED MOVIES" />
+          <img
+            className="main-nav-logo"
+            src="/images/SMR_logo4.png"
+            alt="SERIOUS RATED MOVIES"
+          />
         </Link>
       </nav>
     );

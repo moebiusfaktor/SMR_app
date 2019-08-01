@@ -31,38 +31,45 @@ export class Search extends Component {
     });
   };
 
+  addDefaultSrc(ev) {
+    ev.target.src = "/images/SMR_poster_alt.png";
+  }
+
   render() {
     return (
-      <div>
-        <div style={{ marginBottom: "14px" }}>
-          <form>
-            <input
-              className={
-                this.state.movies.length && this.state.searchInput
-                  ? "Searchbar-top"
-                  : "Searchbar-center"
-              }
-              onChange={this.handleChange}
-              type="text"
-              name="searchInput"
-              value={this.state.searchInput}
-              box-sizing="border-box"
-            />
-          </form>
-        </div>
+      <div className="search">
+        <form>
+          <input
+            className={
+              this.state.movies.length && this.state.searchInput
+                ? "Searchbar-top"
+                : "Searchbar-center"
+            }
+            onChange={this.handleChange}
+            type="text"
+            name="searchInput"
+            value={this.state.searchInput}
+            box-sizing="border-box"
+          />
+        </form>
 
         {this.state.movies && this.state.movies[0] ? (
-          this.state.movies.map(element => (
-            <div className="movie-card">
-              <Link to={`/Rating/${element.id}`}>
-                <img
-                  className="gallery"
-                  src={`https://image.tmdb.org/t/p/w500${element.poster_path}`}
-                />
-                <h2>{element.title}</h2>
-              </Link>
-            </div>
-          ))
+          <div className="movies-list">
+            {this.state.movies.map(element => (
+              <div className="movie-card">
+                <Link key={element.id} to={`/Rating/${element.id}`}>
+                  <p>{element.title}</p>
+                  <img
+                    className="gallery"
+                    src={`https://image.tmdb.org/t/p/w500${
+                      element.poster_path
+                    }`}
+                    onError={this.addDefaultSrc}
+                  />
+                </Link>
+              </div>
+            ))}
+          </div>
         ) : (
           <img className="big-logo" src="/images/SMR_logo_tag.png" />
         )}
