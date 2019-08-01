@@ -5,7 +5,7 @@
 }
 
 .signup-form {
-  margin-top: 1vh;
+  margin-top: 10rem;
   box-sizing: content-box;
   background-color: #000;
   text-align: center;
@@ -15,6 +15,7 @@
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.4);
+  height: 10rem;
 }
 
 .signup-input {
@@ -22,9 +23,13 @@
   color: white;
 }
 
-.big-logo {
-  margin-top: 20vh;
-  margin-left: auto;
-  margin-right: auto;
-  height: 50vh;
+button {
+  border-radius: 0%;
+  background-color: #000;
+  color: white;
+  font-family: "Radley", serif;
+}
+
+.placeholder {
+  font-family: "Radley", serif !important;
 }

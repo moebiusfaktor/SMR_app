@@ -1,6 +1,11 @@
 body {
-  background-color: #d7263d;
-  margin-top: 60px;
+  background: linear-gradient(
+    145deg,
+    rgba(215, 38, 61, 1) 0%,
+    rgba(151, 10, 8, 1) 50%,
+    rgba(29, 38, 113, 1) 100%
+  );
+  min-height: 100vh;
 }
 
 .movie-card {
@@ -51,9 +56,9 @@ body {
   font-family: "Radley", serif;
   overflow: hidden;
   position: absolute;
-  width: 50%;
+  width: 50rem;
   height: 5%;
-  font-size: 100%;
+  font-size: 3rem;
   /* margin-top: 5%; */
   top: 25%;
   left: 50%;
@@ -74,11 +79,27 @@ body {
 }
 
 .big-logo {
+  margin-top: 30vh;
+  margin-left: auto;
+  margin-right: auto;
   height: 50vh;
   transition: transform 0.8s ease-in-out;
 }
 
 .big-logo:hover {
   height: 50vh;
-  transform: scale(1.1) rotate(-20deg);
+  transform: scale(1.1) rotate(-10deg);
+}
+
+.search-container {
+  height: 10rem;
+  padding-bottom: 5px;
+  padding-top: 15px;
+  box-sizing: content-box;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 5px;
+  }
 }

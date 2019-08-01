@@ -37,27 +37,26 @@ export default class Login extends Component {
   render() {
     return (
       <div className="login-page">
-        <img className="big-logo" src="/images/SMR_logo_tag.png" />
         <div className="login-form">
           <Form className="login-input" onSubmit={this.handleSubmit}>
             <Form.Group>
-              <Form.Label htmlFor="username">Username:</Form.Label>
               <Form.Control
                 type="text"
                 name="username"
                 id="username"
                 value={this.state.username}
                 onChange={this.handleChange}
+                placeholder="username"
               />
             </Form.Group>
             <Form.Group>
-              <Form.Label htmlFor="password">Password:</Form.Label>
               <Form.Control
                 type="password"
                 name="password"
                 id="password"
                 value={this.state.password}
                 onChange={this.handleChange}
+                placeholder="email"
               />
             </Form.Group>
 
@@ -71,6 +70,7 @@ export default class Login extends Component {
             </p>
           </Form>
         </div>
+        <img className="big-logo-auth" src="/images/SMR_logo_tag.png" />
       </div>
     );
   }

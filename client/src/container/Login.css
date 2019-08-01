@@ -5,7 +5,9 @@
 }
 
 .login-form {
-  margin-top: 1vh;
+  margin-top: 10rem;
+  height: 10rem;
+
   box-sizing: content-box;
   background-color: #000;
   text-align: center;
@@ -17,14 +19,19 @@
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.4);
 }
 
-.login-input {
-  font-family: "Radley", serif;
-  color: white;
-}
-
-.big-logo {
-  margin-top: 20vh;
+.big-logo-auth {
   margin-left: auto;
   margin-right: auto;
   height: 50vh;
+  transition: transform 0.8s ease-in-out;
+}
+
+.big-logo-auth:hover {
+  height: 50vh;
+  transform: scale(1.1) rotate(-10deg);
+}
+
+.login-input {
+  font-family: "Radley", serif;
+  color: white;
 }

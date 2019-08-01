@@ -26,7 +26,7 @@ class NavBar extends React.Component {
           <Link to="/profile">Profile</Link>
         </div>
         <Link to={`/`} activeClassName="active">
-          <img src="/images/SMR_logo4.png" alt="SERIOUS RATED MOVIES" />
+          <img src="/images/SMR_navLogo.png" alt="SERIOUS RATED MOVIES" />
         </Link>
       </nav>
     );

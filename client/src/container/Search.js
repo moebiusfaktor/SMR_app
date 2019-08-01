@@ -34,20 +34,22 @@ export class Search extends Component {
   render() {
     return (
       <div>
-        <form>
-          <input
-            className={
-              this.state.movies.length && this.state.searchInput
-                ? "Searchbar-top"
-                : "Searchbar-center"
-            }
-            onChange={this.handleChange}
-            type="text"
-            name="searchInput"
-            value={this.state.searchInput}
-            box-sizing="border-box"
-          />
-        </form>
+        <div style={{ marginBottom: "14px" }}>
+          <form>
+            <input
+              className={
+                this.state.movies.length && this.state.searchInput
+                  ? "Searchbar-top"
+                  : "Searchbar-center"
+              }
+              onChange={this.handleChange}
+              type="text"
+              name="searchInput"
+              value={this.state.searchInput}
+              box-sizing="border-box"
+            />
+          </form>
+        </div>
 
         {this.state.movies && this.state.movies[0] ? (
           this.state.movies.map(element => (
