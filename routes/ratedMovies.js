@@ -27,6 +27,12 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get("/user/:id", (req, res) => {
+  RatedMovie.find({ user_id: req.user._id }).then(movies => {
+    res.json(movies);
+  });
+});
+
 router.get("/:id", (req, res) => {
   console.log("called");
   RatedMovie.find({ tmdb_id: req.params.id }).then(movies => {

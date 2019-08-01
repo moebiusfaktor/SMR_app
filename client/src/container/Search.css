@@ -75,9 +75,10 @@ body {
 
 .big-logo {
   height: 50vh;
+  transition: transform 0.8s ease-in-out;
 }
 
-.big-logo-hidden {
-  height: 0vh;
-  visibility: hidden;
+.big-logo:hover {
+  height: 50vh;
+  transform: scale(1.1) rotate(-20deg);
 }

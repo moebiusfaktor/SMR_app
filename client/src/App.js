@@ -23,6 +23,7 @@ class App extends React.Component {
     });
   };
   render() {
+    console.log(this.state.user);
     return (
       <div className="App">
         <Router>
@@ -69,7 +70,10 @@ class App extends React.Component {
                 />
               )}
             />
-            <Route path="/Profile" component={Profile} />
+            <Route
+              path="/Profile"
+              render={props => <Profile user={this.state.user} {...props} />}
+            />
           </Switch>
         </Router>
       </div>
