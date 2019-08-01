@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default class Profile extends Component {
@@ -34,18 +35,22 @@ export default class Profile extends Component {
           <button onClick={() => this.handleSort("lighting")}>Lighting</button>
           <button onClick={() => this.handleSort("acting")}>Acting</button>
         </div>
-        {[...this.state.movies]
-          .sort((a, b) => b[this.state.sort] - a[this.state.sort])
-          .map(movie => (
-            <div>
-              <img
-                src={`https://image.tmdb.org/t/p/w500${movie.poster}`}
-                alt=""
-              />
-              <p>{movie.title}</p>
-              <p>{movie[this.state.sort]}</p>
-            </div>
-          ))}
+        <div>
+          {[...this.state.movies]
+            .sort((a, b) => b[this.state.sort] - a[this.state.sort])
+            .map(movie => (
+              <div>
+                <Link to={`/rating/${movie.tmdb_id}`}>
+                  <img
+                    src={`https://image.tmdb.org/t/p/w500${movie.poster}`}
+                    alt=""
+                  />
+                  <p>{movie.title}</p>
+                  <p>{movie[this.state.sort]}</p>
+                </Link>
+              </div>
+            ))}
+        </div>
       </div>
     );
   }
