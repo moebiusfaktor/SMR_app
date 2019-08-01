@@ -42,13 +42,14 @@ class Rating extends Component {
       .post("/api/ratedMovies", this.state)
       .then(response => {
         this.setState({ isRatedByUser: true });
+        this.getData();
       })
       .catch(err => {
         this.props.history.push("/login");
       });
   };
 
-  componentDidMount() {
+  getData = () => {
     const tmdb_id = this.props.match.params.id;
     this.setState({ tmdb_id: tmdb_id });
 
@@ -151,6 +152,10 @@ class Rating extends Component {
       .catch(function(error) {
         console.log(error);
       });
+  };
+
+  componentDidMount() {
+    this.getData();
   }
 
   handleRadar = () => {

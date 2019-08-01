@@ -16,6 +16,7 @@ export class Scales extends Component {
         "Lighting",
         "Writing"
       ],
+
       datasets: [
         {
           label: "Average Rating",
@@ -57,7 +58,20 @@ export class Scales extends Component {
     return (
       <div>
         <h2>Horizontal Bar Example</h2>
-        <HorizontalBar data={data} />
+        <HorizontalBar
+          options={{
+            scales: {
+              yAxes: [
+                {
+                  ticks: {
+                    beginAtZero: true
+                  }
+                }
+              ]
+            }
+          }}
+          data={data}
+        />
       </div>
     );
   }

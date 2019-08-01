@@ -56,7 +56,20 @@ export default class RadarComp extends Component {
     return (
       <div>
         <h2>Radar Example</h2>
-        <Radar data={data} />
+        <Radar
+          options={{
+            scales: {
+              yAxes: [
+                {
+                  ticks: {
+                    beginAtZero: true
+                  }
+                }
+              ]
+            }
+          }}
+          data={data}
+        />
       </div>
     );
   }
