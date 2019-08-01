@@ -31,6 +31,11 @@ export class Search extends Component {
     });
   };
 
+  addDefaultSrc(ev) {
+    ev.target.src =
+      "https://m.media-amazon.com/images/M/MV5BMjc0YWM3MjQtNzNhYy00ZWM5LTk2ODMtNTE0ZmVmYzgzMWMwXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg";
+  }
+
   render() {
     return (
       <div>
@@ -50,17 +55,22 @@ export class Search extends Component {
         </form>
 
         {this.state.movies && this.state.movies[0] ? (
-          this.state.movies.map(element => (
-            <div className="movie-card">
-              <Link to={`/Rating/${element.id}`}>
-                <img
-                  className="gallery"
-                  src={`https://image.tmdb.org/t/p/w500${element.poster_path}`}
-                />
-                <h2>{element.title}</h2>
-              </Link>
-            </div>
-          ))
+          <div className="movies-list">
+            {this.state.movies.map(element => (
+              <div className="movie-card">
+                <Link key={element.id} to={`/Rating/${element.id}`}>
+                  <p>{element.title}</p>
+                  <img
+                    className="gallery"
+                    src={`https://image.tmdb.org/t/p/w500${
+                      element.poster_path
+                    }`}
+                    onError={this.addDefaultSrc}
+                  />
+                </Link>
+              </div>
+            ))}
+          </div>
         ) : (
           <img className="big-logo" src="/images/SMR_logo_tag.png" />
         )}

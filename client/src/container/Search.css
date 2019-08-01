@@ -3,13 +3,42 @@ body {
   margin-top: 60px;
 }
 
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 .movie-card {
   font-display: flex;
   font-family: "Abril Fatface", cursive;
   color: white;
-  margin: 5px, 5px;
+  /* margin: 5px, 5px; */
   padding: -50px, 0px;
   /* box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2); */
+  max-width: 21vw;
+  margin-bottom: 1.5rem;
+  padding: 0.4rem;
+  text-align: center;
+  position: relative;
+}
+
+.movie-card img {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  vertical-align: middle;
+  border-style: none;
+}
+
+.movie-card p {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   z-index: 1;
 }
 
