@@ -4,7 +4,7 @@ import axios from "axios";
 export default class Bestlist extends Component {
   state = {
     movies: [],
-    sort: "actingAvg"
+    sort: "directingAvg"
   };
 
   componentDidMount() {
@@ -32,7 +32,7 @@ export default class Bestlist extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ marginTop: "100px" }}>
         <div>
           <button onClick={() => this.handleSort("directingAvg")}>
             Directing
@@ -46,21 +46,17 @@ export default class Bestlist extends Component {
             Lighting
           </button>
           <button onClick={() => this.handleSort("actingAvg")}>Acting</button>
-          <button onClick={() => this.handleSort("genreMeterAvg")}>
-            Genre Meter
-          </button>
         </div>
         {[...this.state.movies]
           .sort((a, b) => b[this.state.sort] - a[this.state.sort])
           .map(movie => (
             <div>
-              <p>directingAvg:{movie.directingAvg}</p>
-              <p>writingAvg:{movie.writingAvg}</p>
-              <p>editingAvg:{movie.editingAvg}</p>
-              <p>cameraWorkAvg:{movie.cameraWorkAvg}</p>
-              <p>lightingAvg:{movie.lightingAvg}</p>
-              <p>actingAvg:{movie.actingAvg}</p>
-              <p>genreMeterAvg:{movie.genreMeterAvg}</p>
+              <img
+                src={`https://image.tmdb.org/t/p/w500${movie.poster}`}
+                alt=""
+              />
+              <p>{movie.title}</p>
+              <p>{movie[this.state.sort]}</p>
             </div>
           ))}
       </div>
