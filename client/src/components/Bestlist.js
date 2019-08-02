@@ -24,6 +24,8 @@ export default class Bestlist extends Component {
         };
       });
 
+
+
       this.setState({ movies: avgMovieCats });
     });
   }

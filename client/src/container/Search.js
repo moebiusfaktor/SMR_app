@@ -58,7 +58,7 @@ export class Search extends Component {
             {this.state.movies.map(element => (
               <div className="movie-card">
                 <Link key={element.id} to={`/Rating/${element.id}`}>
-                  <p>{element.title}</p>
+                  {/* <p>{element.title}</p> */}
                   <img
                     className="gallery"
                     src={`https://image.tmdb.org/t/p/w500${

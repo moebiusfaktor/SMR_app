@@ -160,7 +160,7 @@ export default function RatingSlider(props) {
         onChange={(e, value) => props.updateRating("acting", value)}
       />
       <Typography id="discrete-slider-small-steps" gutterBottom>
-        Genremeter
+        Sound
       </Typography>
       <Slider
         defaultValue={0}

@@ -36,3 +36,13 @@
   font-family: "Radley", serif;
   color: white;
 }
+
+button {
+  border: none;
+  border-radius: 0%;
+  background-color: #000;
+  color: white;
+  font-family: "Radley", serif;
+  outline: 1px solid 
+ 
+}

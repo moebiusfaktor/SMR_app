@@ -8,48 +8,48 @@ export class Scales extends Component {
 
     const data = {
       labels: [
-        "Acting",
-        "Camera Work",
         "Directing",
+        "Writing",
         "Editing",
-        "GenreMeter",
+        "Camera",
         "Lighting",
-        "Writing"
+        "Acting",
+        "Sound",
       ],
 
       datasets: [
         {
           label: "Average Rating",
           backgroundColor: "rgba(255,99,132,0.2)",
-          borderColor: "rgba(255,99,132,1)",
+          borderColor: "#FFFFFF",
           borderWidth: 1,
           hoverBackgroundColor: "rgba(255,99,132,0.4)",
           hoverBorderColor: "rgba(255,99,132,1)",
           data: [
-            averageRating.acting,
-            averageRating.cameraWork,
             averageRating.directing,
+            averageRating.writing,
             averageRating.editing,
-            averageRating.genreMeter,
+            averageRating.cameraWork,
             averageRating.lighting,
-            averageRating.writing
+            averageRating.acting,
+            averageRating.genreMeter,
           ]
         },
         {
           label: "My Rating",
           backgroundColor: "rgba(127,99,132,0.2)",
-          borderColor: "rgba(127,99,132,1)",
+          borderColor: "#000000",
           borderWidth: 1,
           hoverBackgroundColor: "rgba(127,99,132,0.4)",
           hoverBorderColor: "rgba(127,99,132,1)",
           data: [
-            userRating.acting,
-            userRating.cameraWork,
             userRating.directing,
+            userRating.writing,
             userRating.editing,
-            userRating.genreMeter,
+            userRating.cameraWork,
             userRating.lighting,
-            userRating.writing
+            userRating.acting,
+            userRating.genreMeter,
           ]
         }
       ]
