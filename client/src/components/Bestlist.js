@@ -33,9 +33,26 @@ export default class Bestlist extends Component {
   };
 
   render() {
-    console.log(this.state);
     return (
       <div>
+        <div className="bestlist-container">
+          {[...this.state.movies]
+            .sort((a, b) => b[this.state.sort] - a[this.state.sort])
+            .map(movie => (
+              <div className="bestlist-movie-card">
+                  <Link to={`/rating/${movie._id}`}>
+                    <img
+                      src={`https://image.tmdb.org/t/p/w500${movie.poster}`}
+                      alt=""
+                    />
+                  </Link>
+                <div className="movie-card-right">
+                  <h3 className="title">{movie.title}</h3>
+                  <h1 className="rate">{movie[this.state.sort]}</h1>
+                </div>
+              </div>
+            ))}
+        </div>
         <div className="sort-button-container">
           <button onClick={() => this.handleSort("directingAvg")}>
             Directing
@@ -49,22 +66,6 @@ export default class Bestlist extends Component {
             Lighting
           </button>
           <button onClick={() => this.handleSort("actingAvg")}>Acting</button>
-        </div>
-        <div className="movie-container">
-          {[...this.state.movies]
-            .sort((a, b) => b[this.state.sort] - a[this.state.sort])
-            .map(movie => (
-              <div className="movie-card">
-                <h3 className="title">{movie.title}</h3>
-                <Link to={`/rating/${movie._id}`}>
-                  <img
-                    src={`https://image.tmdb.org/t/p/w500${movie.poster}`}
-                    alt=""
-                  />
-                </Link>
-                <h1 className="rate">{movie[this.state.sort]}</h1>
-              </div>
-            ))}
         </div>
       </div>
     );

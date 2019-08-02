@@ -54,21 +54,23 @@ export default class RadarComp extends Component {
     };
 
     return (
-      <div>
-        <h2>Radar Example</h2>
+
+      <div style={{width: "50rem"}}>
+
         <Radar
-          options={{
-            scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    beginAtZero: true
-                  }
-                }
-              ]
-            }
-          }}
+        options={{
+          scale: {
+    ticks: {
+      display: false,
+        beginAtZero: true,
+        max: 9,
+        min: 0,
+        stepSize: 0.1
+    }
+}
+        }}
           data={data}
+          
         />
       </div>
     );

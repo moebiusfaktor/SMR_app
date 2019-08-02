@@ -16,7 +16,7 @@ body {
 
 .search .movie-card {
   font-display: flex;
-  font-family: "Abril Fatface", cursive;
+  font-family: "Radley", serif;
   color: white;
   /* margin: 5px, 5px; */
   padding: -50px, 0px;
@@ -37,7 +37,7 @@ body {
 }
 
 .search .movie-card p {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: black;
   color: white;
   position: absolute;
   top: 10%;

@@ -12,6 +12,7 @@
   height: 100vh;
   /* box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.9); */
   overflow: hidden;
+  font-family: "Radley", serif;
 }
 
 .poster-shadow {
@@ -30,6 +31,7 @@
 }
 
 .movie-card h2 {
+  color: white;
   display: inline;
   box-sizing: content-box;
   background-color: #000;
@@ -40,6 +42,8 @@
   box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.4);
 }
 .movie-card h5 {
+  color: white;
+
   font-family: "Radley", serif;
   display: inline;
   box-sizing: content-box;

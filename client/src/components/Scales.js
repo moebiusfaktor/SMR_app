@@ -56,12 +56,12 @@ export class Scales extends Component {
     };
 
     return (
-      <div>
-        <h2>Horizontal Bar Example</h2>
+      <div style={{width: "50rem"}}>
+        
         <HorizontalBar
           options={{
             scales: {
-              yAxes: [
+              xAxes: [
                 {
                   ticks: {
                     beginAtZero: true

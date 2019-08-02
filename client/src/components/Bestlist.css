@@ -1,7 +1,12 @@
 .bestlist-container {
-  margin-top: 100px;
+  margin-top: 15rem;
   display: flex;
-  position: relative;
+  flex-direction: column;
+  align-items: center;
+  /* position: absolute; */
+  width: 35rem;
+  font-family: "Radley", serif;
+
 }
 
 .sort-button-container {
@@ -26,21 +31,17 @@
 
 .movie-container {
   margin: auto;
+  margin-top: 5rem;
 }
 
-.movie-container .movie-card {
+/* .movie-container .movie-card {
   position: relative;
   vertical-align: middle;
   border-style: none;
-}
-
-.movie-container .movie-card img {
-  margin-top: 7rem;
-  width: 35rem;
-}
+} */
 
 .movie-container .movie-card .title {
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5);
   color: white;
   position: absolute;
   top: 15%;
@@ -50,12 +51,39 @@
   z-index: 1;
   font-weight: 900;
   font-size: 2rem;
-  background-color: black;
+  background-color: black; */
   /* width: 35rem; */
 }
 
+.bestlist-movie-card {
+  position: relative;
+  left: 70%;
+  transform: translate(50%);
+
+  justify-content: center;
+  
+  align-items: flex-start;
+  display: flex;
+  margin-bottom: 8rem;
+
+}
+
+.bestlist-movie-card img{
+  width: 40rem;
+  
+}
+
+.movie-card-right {
+  box-sizing:border-box;
+  margin-left: 4rem;
+  /* width: 0rem; */
+  white-space: nowrap;
+  text-align: left;
+  
+}
+
 .movie-container .movie-card .rate {
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5);
   color: white;
   position: absolute;
   top: 85%;
@@ -65,6 +93,19 @@
   z-index: 1;
   font-weight: 900;
   font-size: 2rem;
-  background-color: black;
+  background-color: black; */
   /* width: 35rem; */
+}
+
+.title {
+  background: black;
+  color:white;
+}
+
+.rate {
+  background: black;
+  color:white;
+     display:inline-block;
+border: 5px solid black;
+margin-top: -0.5rem;
 }
